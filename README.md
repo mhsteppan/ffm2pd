@@ -6,7 +6,6 @@ The methodology is described in a recent paper by Steppan et al. (2019).
 
 ## Installation
 
-__Current development version:__ Download package from [AppVeyor](https://ci.appveyor.com/project/mhahsler/seriation/build/artifacts) or install from GitHub (needs devtools).
 ```R 
 install.packages("http://www.iscpt.org/EpiToolbox/ffm2pd_0.0.0.9000.tar.gz", repos=NULL)
 ```
