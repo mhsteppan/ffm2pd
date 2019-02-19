@@ -1,0 +1,10 @@
+Package: ffm2pd
+Title: Calculating Personality Disorders from Five Factor Model Personality scores"
+Version: 0.0.0.9000
+Authors@R: person("Martin", "Steppan", email = "mhsteppan@gmail.com", role = c("aut", "cre"))
+Description: The package calculates relative risks for ten personality disorders based on Big Five personality profile(s). The calculation is based on a method described in Steppan et al. (2019).
+Depends: 
+License: GPL-3
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 6.1.1
