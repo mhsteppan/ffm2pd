@@ -8,21 +8,34 @@ The methodology is described in a recent paper by Steppan et al. (2019).
 
 __Current development version:__ Download package from [AppVeyor](https://ci.appveyor.com/project/mhahsler/seriation/build/artifacts) or install from GitHub (needs devtools).
 ```R 
-install.packages("http://www.iscpt.org/epitoolbox/colorout_1.1-0.tar.gz", repos=NULL)
+install.packages("http://www.iscpt.org/EpiToolbox/ffm2pd_0.0.0.9000.tar.gz", repos=NULL)
 ```
 
 ## Usage
 
 Load library, read data and calculate distances. Then use default seriation.
 ```R
-library(seriation)
-data("iris")
-x <- as.matrix(iris[-5])
-x <- x[sample(1:nrow(x)),]
+library(ffm2pd)
 
-d <- dist(x)
-order <- seriate(d)
-order
+# Example of two recent American presidents and how their personalities may come across
+# The order is always: E-A-C-N-O: 1) Extraversion 2) Agreeableness 3) Conscientiousness 4) Neuroticism 5) Openness (z scores)
+Trump<-cbind(0.3,-2,-1,-0.5,-0.5)
+ffm2pd(Trump)
+
+Obama<-cbind(0.8,1,0.8,-0.5,1.5)
+ffm2pd(Obama)
+
+# Example of a multivariate normal distribution with 1,000 individuals
+E<-rnorm(1000,0,1)
+A<-rnorm(1000,0,1)
+C<-rnorm(1000,0,1)
+N<-rnorm(1000,0,1)
+O<-rnorm(1000,0,1)
+
+data<-cbind(E,A,C,N,O)
+ffm2pd(data)
+
+
 ```
 
 
