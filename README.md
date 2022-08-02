@@ -7,7 +7,8 @@ The methodology is described in a recent paper by Steppan et al. (2019).
 ## Installation
 
 ```R 
-install.packages("http://www.iscpt.org/EpiToolbox/ffm2pd_0.0.0.9000.tar.gz", repos=NULL)
+library(devtools)
+install_github("mhsteppan/ffm2pd")
 ```
 
 ## Usage
